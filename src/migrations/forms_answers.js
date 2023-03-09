@@ -26,13 +26,10 @@ module.exports = {
         allowNull: false,
       },
       created_at: {
-        type: Sequelize.DATE,
+        type: Sequelize.DATEONLY,
         allowNull: false,
+        default: Sequelize.fn('NOW'),
       },
-      updated_at: {
-        type: Sequelize.DATE,
-        allowNull: false,
-      }
      });
   },
 

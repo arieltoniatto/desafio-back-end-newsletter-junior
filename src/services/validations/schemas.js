@@ -7,6 +7,12 @@ const userSchema = Joi.object({
     phone: Joi.string().min(6).required(),
 });
 
+const datesSchema = Joi.object({
+    initialDate: Joi.string().length(10).required(),
+    finalDate: Joi.string().length(10).required(),
+});
+
 module.exports = { 
     userSchema,
+    datesSchema,
 };

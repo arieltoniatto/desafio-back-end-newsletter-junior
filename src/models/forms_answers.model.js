@@ -9,9 +9,13 @@ const SchemaUser = (sequelize, DataTypes) => {
         email: DataTypes.STRING,
         cpf: DataTypes.STRING,
         phone: DataTypes.STRING,
+        createdAt: {
+            type: DataTypes.DATEONLY,
+            defaultValue: DataTypes.NOW,
+        }
     },
     {
-        timestamps: true,
+        timestamps: false,
         tableName: 'forms_answers',
         underscored: true,
     });

@@ -14,7 +14,16 @@ const findAllUsers = async (_req, res) => {
     res.status(200).json(result);
 };
 
+const findUsersByDate = async (req, res) => {
+    const date = req.body;
+
+    const result = await service.findByDate(date);
+
+    res.status(200).json(result)
+}
+
 module.exports = {
     createUser,
     findAllUsers,
+    findUsersByDate,
 };
